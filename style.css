@@ -1,9 +1,27 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+p, h2 {
+    margin: 0;
 }
+main {
+    display: flex;
+}
+main form {
+    order: 2;
+    width: 50%;
+}
+.coffeesList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+}
+.coffee{
+    display: flex;
+    min-width: 50%;
+
+}
+#coffees p {
+    display: flex;
+    align-items: flex-end;
+    font-weight: lighter;
+    margin: 0 0 0 1em;
 }

@@ -11,23 +11,26 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i < coffees.length; i++) {
+    for (var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
-    console.log(html)
     return html;
 }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value.toLowerCase().split(" ");
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+    coffees.forEach(function (coffee) {
+        if (coffee.roast === selectedRoast[0]) {
             filteredCoffees.push(coffee);
         }
     });
-    divBody.innerHTML = renderCoffees(filteredCoffees);
+         if (selectedRoast[0] === "all") {
+             divBody.innerHTML = renderCoffees(coffees);
+         } else {
+             divBody.innerHTML = renderCoffees(filteredCoffees);
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide

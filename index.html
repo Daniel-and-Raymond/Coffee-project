@@ -29,17 +29,22 @@
 </header>
 <!--Main content-->
 <main class="d-flex flex-column container">
-    <ul class="nav nav-tabs" id="myTabNav" role="tablist">
-        <li class="nav-item" >
-            <a class="nav-link active" id="roasts-tab" data-toggle="tab" href="#roasts">Roasts</a>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" id="roast-tab" data-toggle="tab" href="#roasts">
+                Roasts
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="add-coffee-tab" data-toggle="tab" href="#add-coffee-panel" >Add Coffee</a>
+            <a class="nav-link" id="add-coffee-tab" data-toggle="tab" href="#add-coffee-panel">
+                Add Coffee
+            </a>
         </li>
     </ul>
-    <div class="tab-content">
-        <div class="card mb-5" id="search-coffee-form">
-            <!--user searching for coffee-->
+
+    <div class="card mb-5" id="search-coffee-form">
+        <!--user searching for coffee-->
+        <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="roasts">
                 <form class="card">
                     <div class="card-header bg-transparent text-center" id="roast-header">
@@ -58,7 +63,7 @@
                 </form>
             </div>
             <!--Adding users own coffee to the list-->
-            <div class="tab-pane fade" id="add-coffee-panel" role="tabpanel" aria-labelledby="settings-tab">
+            <div class="tab-pane fade" id="add-coffee-panel">
                 <form class="card my-5">
                     <div class="card-header bg-transparent text-center" id="add-your-own">
                         <h3>Add Your Own</h3>
@@ -82,7 +87,11 @@
 
 
 </main>
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 <script>
 </script>

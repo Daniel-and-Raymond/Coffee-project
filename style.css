@@ -1,26 +1,69 @@
-.coffee-text{
+@font-face {
+    font-family: myFirstFont;
+    src: url(/font/es.ttf);
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(/font/rd.ttf);
+}
+
+h1 {
+    font-family: mySecondFont;
+    font-size: 75px;
+}
+
+body {
+    font-family: myFirstFont;
+    background-color: #1c1712;
+}
+
+li {
+    font-weight: bold;
+}
+
+.coffee-text {
     padding-left: 275px;
 }
-.coffeesList{
+
+.coffeesList {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding: 1em;
 }
-.coffee{
+
+.coffee {
     width: 50%;
     display: flex;
 }
-.card{
+
+.card {
+    border-radius: 10px;
+    border: none;
+    background-color: #857d6b;
+}
+
+.card-header {
     border: none;
 }
-.card-header{
-    border: none;
-}
-.coffee p{
+
+.coffee p {
     display: flex;
     align-items: flex-end;
     margin: 0 .5em;
 }
-.coffee h2{
+
+.coffee h2 {
     margin: 0;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+#submit {
+    border-radius: 8px;
+    width: 25%;
+    margin: .5em auto;
 }

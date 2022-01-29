@@ -10,14 +10,26 @@
 </head>
 <body>
 <!--Nav bar-->
-<header class="text-center">
-    <nav class="navbar-brand">
-        <h1>Coffee!</h1>
+<header>
+    <nav class="navbar bg-dark flex-nowrap row">
+        <a class="navbar-brand coffee-text d-flex col justify-content-center" href="#"><h1>Coffee!</h1></a>
+
+        <ul class="nav d-flex justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">About Us</a>
+            </li>
+        </ul>
     </nav>
 </header>
 <!--Main content-->
 <main class="d-flex flex-column container">
-    <div class="card mb-5" id="search-coffee-form">
+    <div class=" div-card card mb-5" id="search-coffee-form">
         <!--user searching for coffee-->
         <form class="card">
             <div class="card-header bg-transparent text-center" id="roast-header">
@@ -50,8 +62,11 @@
             <input id="add-submit" type="submit"/>
         </form>
     </div>
-    <div id="coffees" class="coffeesList card">
-    </div>
+
+        <div id="coffees" class="coffeesList card flex-wrap flex-row">
+        </div>
+
+
 
 </main>
 <script src="main.js"></script>

@@ -1,0 +1,18 @@
+.coffee-text{
+    padding-left: 275px;
+}
+.coffeesList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.coffee{
+    width: 50%;
+    display: flex;
+}
+.card{
+    border: none;
+}
+.card-header{
+    border: none;
+}

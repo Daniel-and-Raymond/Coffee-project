@@ -67,3 +67,14 @@ li {
     width: 25%;
     margin: .5em auto;
 }
+#roast-selection{
+    width: 50%;
+    margin: auto;
+}
+#coffee-search{
+    width: 50%;
+    margin: auto;
+}
+#search-coffee-text{
+    margin: 1em;
+}

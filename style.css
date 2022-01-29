@@ -16,3 +16,11 @@
 .card-header{
     border: none;
 }
+.coffee p{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 .5em;
+}
+.coffee h2{
+    margin: 0;
+}

@@ -43,10 +43,11 @@
     </ul>
 
     <div class="card mb-5" id="search-coffee-form">
-        <!--user searching for coffee-->
+        <!--Panel tab for Roasts already in the page-->
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="roasts">
-                <form class="card">
+                <!--user searching for coffee-->
+                <form class="card" autocomplete="off">
                     <div class="card-header bg-transparent text-center" id="roast-header">
                         <h3>Roasts</h3>
                     </div>
@@ -57,14 +58,15 @@
                         <option>Medium Roasts</option>
                         <option>Dark Roasts</option>
                     </select>
-                    <label class="text-center" id="search-coffee-text" for="coffee-search">Search For Coffee</label>
+                    <label class="text-center" id="search-coffee-text" for="coffee-search" >Search For Coffee</label>
                     <input class="my-2" id="coffee-search" type="text">
                     <input id="submit" type="submit"/>
                 </form>
             </div>
-            <!--Adding users own coffee to the list-->
+            <!--Panel tab for Add Coffee-->
             <div class="tab-pane fade" id="add-coffee-panel">
-                <form class="card my-5">
+                <!--Adding users own coffee to the list-->
+                <form class="card">
                     <div class="card-header bg-transparent text-center" id="add-your-own">
                         <h3>Add Your Own</h3>
                     </div>
@@ -74,7 +76,7 @@
                         <option>Medium Roasts</option>
                         <option>Dark Roasts</option>
                     </select>
-                    <label class="text-center" id="add-coffee-text" for="coffee-search">Search For Coffee</label>
+                    <label class="text-center" id="add-coffee-text" for="coffee-search">Add your own to the list</label>
                     <input class="my-2" id="add-coffee" type="text">
                     <input id="add-submit" type="submit"/>
                 </form>

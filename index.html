@@ -29,46 +29,63 @@
 </header>
 <!--Main content-->
 <main class="d-flex flex-column container">
-    <div class=" div-card card mb-5" id="search-coffee-form">
-        <!--user searching for coffee-->
-        <form class="card">
-            <div class="card-header bg-transparent text-center" id="roast-header">
-                <h3>Roasts</h3>
+    <ul class="nav nav-tabs" id="myTabNav" role="tablist">
+        <li class="nav-item" >
+            <a class="nav-link active" id="roasts-tab" data-toggle="tab" href="#roasts">Roasts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="add-coffee-tab" data-toggle="tab" href="#add-coffee-panel" >Add Coffee</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="card mb-5" id="search-coffee-form">
+            <!--user searching for coffee-->
+            <div class="tab-pane fade show active" id="roasts">
+                <form class="card">
+                    <div class="card-header bg-transparent text-center" id="roast-header">
+                        <h3>Roasts</h3>
+                    </div>
+                    <label for="roast-selection"></label>
+                    <select class="custom-select" id="roast-selection">
+                        <option>All Roasts</option>
+                        <option>Light Roasts</option>
+                        <option>Medium Roasts</option>
+                        <option>Dark Roasts</option>
+                    </select>
+                    <label class="text-center" id="search-coffee-text" for="coffee-search">Search For Coffee</label>
+                    <input class="my-2" id="coffee-search" type="text">
+                    <input id="submit" type="submit"/>
+                </form>
             </div>
-            <label for="roast-selection"></label>
-            <select class="custom-select" id="roast-selection">
-                <option>All Roasts</option>
-                <option>Light Roasts</option>
-                <option>Medium Roasts</option>
-                <option>Dark Roasts</option>
-            </select>
-            <label class="text-center" id="search-coffee-text" for="coffee-search">Search For Coffee</label>
-            <input class="my-2" id="coffee-search" type="text">
-            <input id="submit" type="submit"/>
-        </form>
-        <!--Adding users own coffee to the list-->
-        <form class="card my-5">
-            <div class="card-header bg-transparent text-center" id="add-your-own">
-                <h3>Add Your Own</h3>
+            <!--Adding users own coffee to the list-->
+            <div class="tab-pane fade" id="add-coffee-panel" role="tabpanel" aria-labelledby="settings-tab">
+                <form class="card my-5">
+                    <div class="card-header bg-transparent text-center" id="add-your-own">
+                        <h3>Add Your Own</h3>
+                    </div>
+                    <label for="roast-selection-add"></label>
+                    <select class="custom-select" id="roast-selection-add">
+                        <option>Light Roasts</option>
+                        <option>Medium Roasts</option>
+                        <option>Dark Roasts</option>
+                    </select>
+                    <label class="text-center" id="add-coffee-text" for="coffee-search">Search For Coffee</label>
+                    <input class="my-2" id="add-coffee" type="text">
+                    <input id="add-submit" type="submit"/>
+                </form>
             </div>
-            <label for="roast-selection-add"></label>
-            <select class="custom-select" id="roast-selection-add">
-                <option>Light Roasts</option>
-                <option>Medium Roasts</option>
-                <option>Dark Roasts</option>
-            </select>
-            <label class="text-center" id="add-coffee-text" for="coffee-search">Search For Coffee</label>
-            <input class="my-2" id="add-coffee" type="text">
-            <input id="add-submit" type="submit"/>
-        </form>
+        </div>
     </div>
 
-        <div id="coffees" class="coffeesList card flex-wrap flex-row">
-        </div>
-
+    <div id="coffees" class="coffeesList card flex-wrap flex-row">
+    </div>
 
 
 </main>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script>
+</script>
 <script src="main.js"></script>
 </body>
 </html>

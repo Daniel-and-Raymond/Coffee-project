@@ -1,8 +1,11 @@
 "use strict"
-var divBody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-var searchInput = document.querySelector('#coffee-search');
+const divBody = document.querySelector('#coffees');
+const roastSelection = document.querySelector('#roast-selection');
+const addCoffeeSelection = document.querySelector('#roast-selection-add');
+const searchInput = document.querySelector('#coffee-search');
+const addCoffeeInput = document.querySelector('#add-coffee');
+const submitButton = document.querySelector('#submit');
+const addCoffeeBtn = document.querySelector('#add-submit');
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 const coffees = [
@@ -32,9 +35,11 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
+    let coffeeCopy = coffees.slice();
+    let sortedCoffees = customSort({data:coffeeCopy, sortField: 'roast'})
     let html = '';
-    for (var i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
+    for (let i = 0; i < sortedCoffees.length; i++) {
+        html += renderCoffee(sortedCoffees[i]);
     }
     return html;
 }
@@ -54,19 +59,54 @@ function updateCoffees(e) {
         divBody.innerHTML = renderCoffees(filteredCoffees);
     }
 }
-
-searchInput.addEventListener('keyup', function () {
+function searchCoffeeName() {
     const searchInputName = searchInput.value
     const searchNormalized = searchInputName.charAt(0).toUpperCase() + searchInputName.slice(1);
-    const searchCoffees = []
+    const searchCoffees = [];
     coffees.forEach(function (coffee) {
         if (searchNormalized === coffee.name.slice(0, searchNormalized.length)) {
             searchCoffees.push(coffee);
         }
     });
     divBody.innerHTML = renderCoffees(searchCoffees);
-});
+}
+
+const addCoffee = function (e) {
+    e.preventDefault();
+    // Getting roast selection
+    let addedRoast = addCoffeeSelection.value.toLowerCase().split(' ');
+    // Getting the value from add-coffee-input
+    let coffeeInput = addCoffeeInput.value.split(' ');
+    let coffeeList = [];
+    // turning the beginning of each word uppercase
+    coffeeInput.forEach(function(coffee) {
+        coffeeList.push((coffee.charAt(0).toUpperCase() + coffee.slice(1)));
+    })
+    // creating the new coffee object
+    const newCoffeeObj = {
+        id: coffees.length + 1,
+        name: coffeeList.join(' '),
+        roast: addedRoast[0].toLowerCase(),
+    }
+    coffees.push(newCoffeeObj)
+    updateCoffees(e);
+    addCoffeeInput.value = '';
+}
+
+const customSort = ({data, sortField}) => {
+    const sortBy = ['light', 'medium', 'dark']
+    const sortByObject = sortBy.reduce((obj, item, index) => {
+        return {
+            ...obj,
+            [item]: index
+        }
+    }, {})
+    return data.sort((a, b) => sortByObject[a[sortField]] - sortByObject[b[sortField]])
+}
 
 divBody.innerHTML = renderCoffees(coffees);
 
+//Event Listeners
+searchInput.addEventListener('keyup', searchCoffeeName);
 submitButton.addEventListener('click', updateCoffees);
+addCoffeeBtn.addEventListener('click', addCoffee)

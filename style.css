@@ -32,7 +32,9 @@ li {
     width: 100%;
     padding: 1em;
 }
-
+.coffee-list-card {
+    min-height: 400px;
+}
 .coffee {
     width: 50%;
     display: flex;

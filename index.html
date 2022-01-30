@@ -72,19 +72,21 @@
                     </div>
                     <label for="roast-selection-add"></label>
                     <select class="custom-select" id="roast-selection-add">
-                        <option>Light Roasts</option>
-                        <option>Medium Roasts</option>
-                        <option>Dark Roasts</option>
+                        <option>Light Roast</option>
+                        <option>Medium Roast</option>
+                        <option>Dark Roast</option>
                     </select>
-                    <label class="text-center" id="add-coffee-text" for="coffee-search">Add your own to the list</label>
+                    <label class="text-center" id="add-coffee-text" for="add-coffee">Add your own to the list</label>
                     <input class="my-2" id="add-coffee" type="text">
-                    <input id="add-submit" type="submit"/>
+                    <button id="add-submit">Add Coffee</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="coffees" class="coffeesList card flex-wrap flex-row">
+    <div class="card coffee-list-card">
+        <div id="coffees" class="coffeesList card flex-wrap flex-row">
+        </div>
     </div>
 
 

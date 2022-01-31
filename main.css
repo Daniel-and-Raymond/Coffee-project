@@ -130,6 +130,28 @@
     ::placeholder {
         color: #ccc;
     }
+    #coffees {
+        position: absolute;
+        flex-wrap: wrap;
+        display: flex;
+        font-size: 12px;
+        width: 100%;
+        padding-top: 3em;
+        top: 25%;
+        color: #fff;
+    }
+    .coffee{
+        display: flex;
+        flex-basis: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .coffee p {
+        margin: 0 0 0 8px;
+        font-style: italic;
+        padding: 0;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 996px) {
     * {
@@ -262,6 +284,28 @@
     .info select option{
         background-color: black;
     }
+    #coffees {
+        position: absolute;
+        flex-wrap: wrap;
+        display: flex;
+        font-size: 12px;
+        width: 100%;
+        padding-top: 3em;
+        top: 32%;
+        color: #fff;
+    }
+    .coffee{
+        display: flex;
+        flex-basis: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .coffee p {
+        margin: 0 0 0 8px;
+        font-style: italic;
+        padding: 0;
+    }
 }
 @media screen and (min-width: 1024px){
     * {
@@ -277,6 +321,7 @@
         background-size: cover;
         position: relative;
         background-repeat: no-repeat;
+        z-index: 1;
     }
 
     .navbar {
@@ -325,17 +370,17 @@
         position: absolute;
         left: 0;
         top: 0;
-        z-index: 9;
+        z-index: 5;
     }
 
     .info {
         width: 550px;
         color: #fff;
         position: absolute;
-        top: 60%;
+        top: 35%;
         left: 3%;
         transform: translateY(-50%);
-        padding-top: 100px;
+        /*padding-top: 100px;*/
     }
 
     .info h1 {
@@ -391,17 +436,27 @@
     ::placeholder {
         color: #ccc;
     }
-    .coffees {
+    #coffees {
+        position: absolute;
         flex-wrap: wrap;
         display: flex;
         font-size: 12px;
         width: 100%;
-
+        padding-top: 3em;
+        top: 50%;
+        color: #fff;
     }
     .coffee{
         display: flex;
         flex-basis: 50%;
         width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .coffee p {
+        margin: 0 0 0 8px;
+        font-style: italic;
+        padding: 0;
     }
 
     .vapour {

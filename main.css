@@ -139,17 +139,69 @@ body {
 
     #hero {
         background-position: center;
+        height: 100vw;
     }
 
     .coffee {
-        flex-basis: 25%;
+        flex-basis: 50%;
     }
 
     .navbar .logo {
         width: 250px;
+        z-index: 1000;
+        margin-left: 70px;
     }
 
     .navbar #add-coffee img {
         width: 225px;
+    }
+    .container-fluid {
+        margin: 0;
+    }
+
+    #main-container {
+        width: 50%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 500px;
+        padding-top: 150px;
+    }
+    #coffees {
+        width: 50%;
+        margin: 0;
+        position: absolute;
+        top: 458px;
+        left: 0;
+    }
+}
+@media (min-width: 1440px) {
+    .navbar .logo {
+        margin-left: 170px;
+    }
+}
+@media (min-width: 2560px) {
+    * {
+        font-size: 25px;
+    }
+    .navbar .logo {
+        width: 400px;
+        margin-left: 330px;
+    }
+    .navbar #add-coffee img {
+        width: 500px;
+    }
+    #main-container {
+        padding-top: 250px;
+        height: 776px;
+
+    }
+    #coffees {
+        top: 700px;
+    }
+    .coffee h2 {
+        display: flex;
+        align-items: flex-end;
     }
 }

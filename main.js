@@ -1,11 +1,22 @@
 "use strict"
 const divBody = document.querySelector('#coffees');
-const roastSelection = document.querySelector('#roast-selection');
+const roastSelection = document.querySelector('#option-to-choose');
 const addCoffeeSelection = document.querySelector('#roast-selection-add');
-const searchInput = document.querySelector('#coffee-search');
-const addCoffeeInput = document.querySelector('#add-coffee');
-const submitButton = document.querySelector('#submit');
+const searchInput = document.querySelector('#search-our-roast');
+const addCoffeeInput = document.querySelector('#add-coffee-input');
+const searchBtn = document.querySelector('#search-coffee');
 const addCoffeeBtn = document.querySelector('#add-submit');
+const switchModal = document.querySelector('#switch-modal');
+const storedCoffee = localStorage.getItem('');
+const modalOne = document.querySelector('#modal-one');
+const modalTwo = document.querySelector('#modal-two');
+
+$(document).ready(function () {
+    $('#switch-modal').click(function () {
+        $('#modal-one').hide();
+        $('#modal-two').fadeIn(2000).show();
+    })
+})
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 const coffees = [
@@ -25,10 +36,14 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function getStoredData() {
+
+}
+
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<h2 class="m-0">' + coffee.name + '</h2>';
+    html += '<p class="mb-0 ml-2">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -36,7 +51,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let coffeeCopy = coffees.slice();
-    let sortedCoffees = customSort({data:coffeeCopy, sortField: 'roast'})
+    let sortedCoffees = customSort({data: coffeeCopy, sortField: 'roast'})
     let html = '';
     for (let i = 0; i < sortedCoffees.length; i++) {
         html += renderCoffee(sortedCoffees[i]);
@@ -59,6 +74,7 @@ function updateCoffees(e) {
         divBody.innerHTML = renderCoffees(filteredCoffees);
     }
 }
+
 function searchCoffeeName() {
     const searchInputName = searchInput.value
     const searchNormalized = searchInputName.charAt(0).toUpperCase() + searchInputName.slice(1);
@@ -79,7 +95,7 @@ const addCoffee = function (e) {
     let coffeeInput = addCoffeeInput.value.split(' ');
     let coffeeList = [];
     // turning the beginning of each word uppercase
-    coffeeInput.forEach(function(coffee) {
+    coffeeInput.forEach(function (coffee) {
         coffeeList.push((coffee.charAt(0).toUpperCase() + coffee.slice(1)));
     })
     // creating the new coffee object
@@ -91,6 +107,7 @@ const addCoffee = function (e) {
     coffees.push(newCoffeeObj)
     updateCoffees(e);
     addCoffeeInput.value = '';
+    localStorage.setItem('listOfCoffee', JSON.stringify(coffees))
 }
 
 const customSort = ({data, sortField}) => {
@@ -108,5 +125,5 @@ divBody.innerHTML = renderCoffees(coffees);
 
 //Event Listeners
 searchInput.addEventListener('keyup', searchCoffeeName);
-submitButton.addEventListener('click', updateCoffees);
+searchBtn.addEventListener('click', updateCoffees);
 addCoffeeBtn.addEventListener('click', addCoffee)

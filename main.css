@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "ButterChicken";
+    src: url("/font/ButterChicken.ttf");
+}
+
+@font-face {
+    font-family: "CuppaJoe";
+    src: url("/font/CuppaJoe.ttf");
+}
+
+* {
+    /*font-family: 'ButterChicken', sans-serif;*/
+    font-size: 9px;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#hero {
+    background-image: url("img/coffee-cup-milk-foam.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    color: #F4F4F6;
+}
+
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .logo {
+    width: 100px;
+}
+
+.navbar #add-coffee img {
+    width: 150px;
+}
+
+.navbar #add-coffee {
+    flex-basis: 50%;
+}
+
+.add-own {
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+.add-own button {
+    width: 75%;
+}
+
+.info {
+    font-size: 15px;
+}
+
+.container-fluid {
+    /*height: 100vh;*/
+    background: rgba(86, 86, 86, 0.5);
+    backdrop-filter: blur(2px);
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 23px;
+}
+
+.coffee {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.coffee p {
+    display: flex;
+    align-items: flex-end;
+    font-style: italic;
+}
+
+@media (min-width: 570px) {
+    #hero {
+        background-size: cover;
+    }
+
+    .navbar {
+        /*background: rgba(86, 86, 86, 0.8);*/
+        margin: 0;
+    }
+
+    .navbar .logo {
+        width: 150px;
+    }
+
+    .navbar #add-coffee {
+        flex-basis: 0;
+    }
+
+    .navbar #add-coffee img {
+        width: 175px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    #option-to-choose, #search-our-roast, #roast-selection-add, #add-coffee-input {
+        width: 75%;
+    }
+
+}
+
+.hidden {
+    display: none;
+}
+.show{
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    * {
+        font-size: 12px;
+    }
+
+    .navbar {
+        margin: 0 4em;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    * {
+        font-size: 14px;
+    }
+
+    #hero {
+        background-position: center;
+    }
+
+    .coffee {
+        flex-basis: 25%;
+    }
+
+    .navbar .logo {
+        width: 250px;
+    }
+
+    .navbar #add-coffee img {
+        width: 225px;
+    }
+}

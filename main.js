@@ -14,16 +14,16 @@ $(document).ready(function () {
     $('#switch-modal').click(function () {
         $('#modal-one').fadeOut(500);
         $('#modal-two').fadeIn(2000);
-    })
+    });
     $('#back').click(function () {
         $('#modal-two').fadeOut(500);
         $('#modal-one').fadeIn(3000);
-    })
+    });
 });
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 // initializing coffee array
-let coffees = []
+let coffees = [];
 
 // determining local stored data within your browser
 function getStoredData() {

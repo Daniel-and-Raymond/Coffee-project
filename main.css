@@ -14,7 +14,7 @@
     padding: 0;
     color: var(--secondary-text-color);
     text-shadow: 2px 2px black;
-    font-family: test;
+    font-family: test, sans-serif;
 }
 
 h1 {
@@ -72,7 +72,7 @@ button {
 .container {
     width: 100vw;
     height: 100vh;
-    background: rgba(86, 86, 86, 0.7);
+    background: rgba(86, 86, 86, 0.5);
     backdrop-filter: blur(10px);
     position: absolute;
     left: 0;
@@ -154,7 +154,7 @@ button {
     width: 100%;
     padding-top: 3em;
     top: 220px;
-    color: #fff;
+
 }
 
 .coffee {
@@ -343,11 +343,19 @@ button {
         background: #fff;
         border-radius: 50%;
         animation: animate 5s linear infinite;
+        /*animation is used to create a name in which you can manipulate
+         in @keyframes*/
         opacity: 0;
+        /*starts at 0 percent opacity*/
         filter: blur(10px);
+        /*without blur it would just be a bunch of circles*/
         animation-delay: calc(var(--i) * -0.5s);
+        /*  gives the animated an interval from the time the element is loaded
+         and the beginning of the animation sequence*/
     }
 
+    /*percents are used to show where in the animation changes
+    will be made*/
     @keyframes animate {
         0% {
             transform: translateY(0) scaleX(1);

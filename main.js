@@ -14,6 +14,10 @@ $(document).ready(function () {
         $('#modal-one').fadeOut(500)
         $('#modal-two').fadeIn(2000)
     })
+    $('#back').click(function (){
+        $('#modal-two').fadeOut(500);
+        $('#modal-one').fadeIn(3000);
+    })
 })
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -96,21 +100,26 @@ const addCoffee = function (e) {
     let addedRoast = addCoffeeSelection.value.toLowerCase().split(' ');
     // Getting the value from add-coffee-input
     let coffeeInput = addCoffeeInput.value.split(' ');
-    let coffeeList = [];
-    // turning the beginning of each word uppercase
-    coffeeInput.forEach(function (coffee) {
-        coffeeList.push((coffee.charAt(0).toUpperCase() + coffee.slice(1)));
-    })
-    // creating the new coffee object
-    const newCoffeeObj = {
-        id: coffees.length + 1,
-        name: coffeeList.join(' '),
-        roast: addedRoast[0].toLowerCase(),
+    console.log(coffeeInput)
+    if(coffeeInput[0] !== ''){
+        let coffeeList = [];
+        // turning the beginning of each word uppercase
+        coffeeInput.forEach(function (coffee) {
+            coffeeList.push((coffee.charAt(0).toUpperCase() + coffee.slice(1)));
+        })
+        // creating the new coffee object
+        const newCoffeeObj = {
+            id: coffees.length + 1,
+            name: coffeeList.join(' '),
+            roast: addedRoast[0].toLowerCase(),
+        }
+        coffees.push(newCoffeeObj)
+        updateCoffees(e);
+        addCoffeeInput.value = '';
+        localStorage.setItem('listOfCoffee', JSON.stringify(coffees))
+    } else {
+        alert('Please enter the name of a coffee');
     }
-    coffees.push(newCoffeeObj)
-    updateCoffees(e);
-    addCoffeeInput.value = '';
-    localStorage.setItem('listOfCoffee', JSON.stringify(coffees))
 }
 
 const customSort = ({data, sortField}) => {

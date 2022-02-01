@@ -1,426 +1,275 @@
+:root {
+    --bg-color: #584D39;
+    --text-color: #f0eef1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+#hero {
+    width: 320px;
+    height: 667px;
+    background-image: url("img/coffee-cup-milk-foam.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    top: 0;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 180px;
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+button {
+    padding: 8px 25px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(86, 86, 86, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 120px;
+    z-index: 9;
+}
+
+.info {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 60px;
+    transform: translateY(-50%);
+    padding-top: 30px;
+    flex-direction: column;
+}
+
+.info h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.info p {
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 20px;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.info input {
+    width: 50%;
+    padding: 8px 10px;
+    outline: none;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.roast-selection {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.search-roast-input {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.info select {
+    width: 50%;
+    padding: 8px 10px;
+    outline: none;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    background: transparent;
+    color: #ffffff;
+}
+
+.info select option {
+    background-color: black;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+#coffees {
+    position: absolute;
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 12px;
+    width: 100%;
+    padding-top: 3em;
+    top: 220px;
+    color: #fff;
+}
+
+.coffee {
+    display: flex;
+    flex-basis: 50%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee p {
+    margin: 0 0 0 8px;
+    font-style: italic;
+    padding: 0;
+}
+
+#back {
+    text-decoration: none;
+    position: absolute;
+    top: 305px;
+    left: 40%;
+}
+#back:hover{
+    color: red;
+}
+
+
 .hidden {
     display: none;
 }
-
-@media screen and (max-width: 428px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    #hero {
-        width: 320px;
-        height: 667px;
-        background-image: url("img/coffee-cup-milk-foam.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #584D39;
-    }
-
-    .navbar {
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        z-index: 10;
-        top: 0;
-    }
-
-    .navbar .logo {
-        width: 150px;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-    }
-
-    .user img {
-        width: 180px;
-        cursor: pointer;
-        padding-left: 40px;
-    }
-
-    button {
-        padding: 8px 25px;
-        background: transparent;
-        outline: none;
-        border: 2px solid #fff;
-        border-radius: 20px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .container {
-        width: 100vw;
-        height: 100vh;
-        background: rgba(86, 86, 86, 0.7);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        left: 0;
-        top: 120px;
-        z-index: 9;
-    }
-
-    .info {
-        width: 100%;
-        color: #fff;
-        position: absolute;
-        top: 60px;
-        transform: translateY(-50%);
-        padding-top: 30px;
-        flex-direction: column;
-    }
-
-    .info h1 {
-        font-size: 20px;
-        letter-spacing: 2px;
-        padding-top: 90px;
-        text-align: center;
-    }
-
-    .info p {
-        color: #f0eef1;
-        font-size: 15px;
-        margin: 20px 0;
-        line-height: 20px;
-        text-align: center;
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    .info input {
-        width: 50%;
-        padding: 8px 10px;
-        outline: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        color: #ffffff;
-        font-size: 12px;
-    }
-
-    .roast-selection {
-        padding-top: 5px;
-        padding-left: 10px;
-    }
-
-    .search-roast-input {
-        padding-top: 20px;
-        padding-left: 50px;
-    }
-
-    .info select {
-        width: 50%;
-        padding: 8px 10px;
-        outline: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        color: #ffffff;
-    }
-
-    .info select option {
-        background-color: black;
-    }
-
-    ::placeholder {
-        color: #ccc;
-    }
-
-    #coffees {
-        position: absolute;
-        flex-wrap: wrap;
-        display: flex;
-        font-size: 12px;
-        width: 100%;
-        padding-top: 3em;
-        top: 25%;
-        color: #fff;
-    }
-
-    .coffee {
-        display: flex;
-        flex-basis: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .coffee p {
-        margin: 0 0 0 8px;
-        font-style: italic;
-        padding: 0;
-    }
-
-    .search-roast-input a {
-        padding-left: 125px;
-    }
-}
-
 @media screen and (min-width: 768px) and (max-width: 996px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
     #hero {
         width: 768px;
         height: 1024px;
-        background-image: url("img/coffee-cup-milk-foam.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #584D39;
-    }
-
-    .navbar {
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        z-index: 10;
-        top: 0;
-    }
-
-    .navbar .logo {
-        width: 150px;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
     }
 
     .user img {
-        width: 180px;
-        cursor: pointer;
         padding-left: 430px;
     }
 
-    button {
-        padding: 8px 25px;
-        background: transparent;
-        outline: none;
-        border: 2px solid #fff;
-        border-radius: 20px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
     .container {
-        width: 100vw;
         height: 100%;
-        background: rgba(86, 86, 86, 0.7);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        left: 0;
-        top: 120px;
-        z-index: 9;
     }
 
     .info {
-        width: 100%;
-        color: #fff;
-        position: absolute;
-        top: 60px;
-        transform: translateY(-50%);
         padding-top: 100px;
-        flex-direction: column;
     }
 
     .info h1 {
         font-size: 40px;
-        letter-spacing: 2px;
-        padding-top: 90px;
-        text-align: center;
     }
 
     .info p {
-        color: #f0eef1;
         font-size: 20px;
-        margin: 20px 0;
-        line-height: 20px;
-        text-align: center;
-        padding-left: 2em;
-        padding-right: 2em;
     }
 
     .info input {
-        width: 50%;
         padding: 10px 20px;
-        outline: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        color: #ffffff;
-        font-size: 12px;
     }
 
     .roast-selection {
-        padding-top: 5px;
         padding-left: 175px;
     }
 
     .search-roast-input {
-        padding-top: 20px;
         padding-left: 200px;
     }
 
     .info select {
-        width: 50%;
         padding: 4px 20px;
-        outline: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        color: #ffffff;
         font-size: 20px;
     }
 
     ::placeholder {
-        color: #ccc;
         font-size: 20px;
     }
 
-    .info select option {
-        background-color: black;
-    }
-
     #coffees {
-        position: absolute;
-        flex-wrap: wrap;
-        display: flex;
-        font-size: 12px;
-        width: 100%;
-        padding-top: 3em;
-        top: 32%;
-        color: #fff;
+        top: 260px;
     }
-
-    .coffee {
-        display: flex;
-        flex-basis: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .coffee p {
-        margin: 0 0 0 8px;
-        font-style: italic;
-        padding: 0;
+    #back {
+        top: 400px;
+        left: 50%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
     #hero {
         width: 100vw;
         height: 100vh;
-        background-image: url("img/coffee-cup-milk-foam.jpg");
         background-size: cover;
         position: relative;
-        background-repeat: no-repeat;
-        z-index: 1;
     }
 
     .navbar {
         width: 100%;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        z-index: 10;
         top: 15px;
     }
 
     .navbar .logo {
-        width: 150px;
         margin: 30px 0;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
     }
 
     .user img {
         width: 175px;
-        cursor: pointer;
-    }
-
-    button {
-        padding: 8px 25px;
-        background: transparent;
-        outline: none;
-        border: 2px solid #fff;
-        border-radius: 20px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
     }
 
     .container {
         width: 50%;
-        height: 100vh;
-        background: rgba(86, 86, 86, 0.3);
-        backdrop-filter: blur(10px);
-        position: absolute;
-        left: 0;
         top: 0;
         z-index: 5;
     }
 
     .info {
         width: 550px;
-        color: #fff;
-        position: absolute;
-        top: 35%;
+        top: 180px;
         left: 3%;
-        transform: translateY(-50%);
-        /*padding-top: 100px;*/
     }
 
     .info h1 {
         font-size: 30px;
-        letter-spacing: 2px;
         text-align: center;
         padding-right: 75px;
     }
 
     .info p {
-        color: #f0eef1;
-        font-size: 15px;
-        margin: 20px 0;
         line-height: 18px;
-        text-align: center;
         padding-right: 60px;
     }
 
-    .info input {
-        width: 50%;
-        padding: 8px 10px;
-        outline: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        color: #ffffff;
-        font-size: 12px;
-    }
 
     .roast-selection {
         padding-top: 20px;
@@ -428,51 +277,23 @@
     }
 
     .search-roast-input {
-        padding-top: 20px;
         padding-left: 50px;
     }
 
     .info select {
         width: 50%;
-        padding: 8px 10px;
-        outline: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        color: #ffffff;
     }
 
     .info select option {
         background-color: black;
     }
 
-    ::placeholder {
-        color: #ccc;
-    }
-
     #coffees {
-        position: absolute;
-        flex-wrap: wrap;
-        display: flex;
-        font-size: 12px;
-        width: 100%;
-        padding-top: 3em;
-        top: 50%;
-        color: #fff;
+        top: 340px;
     }
-
-    .coffee {
-        display: flex;
-        flex-basis: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .coffee p {
-        margin: 0 0 0 8px;
-        font-style: italic;
-        padding: 0;
+    #back {
+        top: 325px;
+        left: 40%;
     }
 
     .vapor {
@@ -518,17 +339,21 @@
         }
     }
 }
-
+@media screen and (min-width: 1440px) {
+    .info {
+        left: 15%;
+        top: 170px;
+    }
+}
 @media screen and (min-width: 2560px) {
     .info {
-        padding-left: 250px;
+        left: 28%;
+        top: 210px;
     }
-
     .info h1 {
         font-size: 40px;
         padding: 0;
     }
-
     .navbar .logo {
         width: 300px;
         padding-top: 60px;
@@ -543,7 +368,6 @@
         padding-left: 25px;
         padding-top: 10px;
         margin: 0;
-        text-align: left;
     }
 
     .roast-selection label {
@@ -586,5 +410,8 @@
     .coffee {
         font-size: 18px;
     }
-
+    #back {
+        top: 245px;
+        left: 40%;
+    }
 }

@@ -345,10 +345,16 @@ button {
         top: 170px;
     }
 }
+@media screen and (min-width: 1880px){
+    .vapor span{
+        left: 800px;
+        top: 250px;
+    }
+}
 @media screen and (min-width: 2560px) {
     .info {
-        left: 28%;
-        top: 210px;
+        left: 17%;
+        top: 300px;
     }
     .info h1 {
         font-size: 40px;
@@ -365,7 +371,7 @@ button {
 
     .info p {
         font-size: 20px;
-        padding-left: 25px;
+        padding-left: 30px;
         padding-top: 10px;
         margin: 0;
     }
@@ -373,7 +379,9 @@ button {
     .roast-selection label {
         font-size: 20px;
     }
-
+    .roast-selection{
+        padding-left: 200px;
+    }
     .roast-selection select {
         font-size: 15px;
     }
@@ -409,6 +417,9 @@ button {
 
     .coffee {
         font-size: 18px;
+    }
+    #coffees{
+        top: 500px;
     }
     #back {
         top: 245px;

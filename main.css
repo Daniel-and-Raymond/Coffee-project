@@ -1,13 +1,23 @@
 :root {
     --bg-color: #584D39;
     --text-color: #f0eef1;
+    --secondary-text-color: #F3DE8A;
+}
+@font-face {
+    font-family: test;
+    src: url("font/gibroma.otf");
 }
 * {
     margin: 0;
     padding: 0;
-    color: var(--text-color);
+    color: var(--secondary-text-color);
+    text-shadow: 2px 2px black;
+    font-family: test;
 }
-
+h1{
+    color: var(--secondary-text-color);
+    text-shadow: 4px 4px black;
+}
 #hero {
     width: 320px;
     height: 667px;
@@ -90,6 +100,7 @@ button {
     text-align: center;
     padding-left: 2em;
     padding-right: 2em;
+    color: var(--secondary-text-color);
 }
 
 .info input {
@@ -106,6 +117,7 @@ button {
 .roast-selection {
     padding-top: 5px;
     padding-left: 10px;
+    color: ;
 }
 
 .search-roast-input {
@@ -154,6 +166,11 @@ button {
     margin: 0 0 0 8px;
     font-style: italic;
     padding: 0;
+    color: #fff;
+}
+.coffee h2{
+    color: #7798AB;
+    letter-spacing: 2px;
 }
 
 #back {
@@ -218,11 +235,14 @@ button {
     }
 
     #coffees {
-        top: 260px;
+        top: 350px;
     }
     #back {
         top: 400px;
         left: 50%;
+    }
+    .coffee{
+        font-size: 18px;
     }
 }
 
@@ -262,18 +282,17 @@ button {
     .info h1 {
         font-size: 30px;
         text-align: center;
-        padding-right: 75px;
+        padding-right: 50px;
     }
 
     .info p {
-        line-height: 18px;
-        padding-right: 60px;
+        line-height: 15px;
+        padding-right: 100px;
     }
 
 
     .roast-selection {
-        padding-top: 20px;
-        padding-left: 30px;
+        padding-left: 35px;
     }
 
     .search-roast-input {
@@ -353,12 +372,12 @@ button {
 }
 @media screen and (min-width: 2560px) {
     .info {
-        left: 17%;
-        top: 300px;
+        left: 3%;
+        top: 400px;
+        width: 100%;
     }
     .info h1 {
-        font-size: 40px;
-        padding: 0;
+        font-size: 60px;
     }
     .navbar .logo {
         width: 300px;
@@ -370,40 +389,42 @@ button {
     }
 
     .info p {
-        font-size: 20px;
-        padding-left: 30px;
-        padding-top: 10px;
-        margin: 0;
+        font-size: 30px;
+        padding-top: 20px;
+        padding-right: 100px;
+
     }
 
     .roast-selection label {
-        font-size: 20px;
+        font-size: 25px;
     }
     .roast-selection{
-        padding-left: 200px;
+        padding: 50px 0 0 230px;
     }
     .roast-selection select {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     #roast-search {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     #search-coffee {
-        font-size: 15px;
+        font-size: 25px;
     }
-
+    .search-roast-input{
+        padding: 50px 0 0 230px;
+    }
     .search-roast-input a {
         padding-left: 200px;
     }
 
     #add-coffee-input {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     #add-submit {
-        font-size: 15px;
+        font-size: 25px;
     }
 
     .vapor span {
@@ -412,17 +433,22 @@ button {
     }
 
     .coffee p {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .coffee {
-        font-size: 18px;
+        font-size: 25px;
+    }
+    .coffee h2{
+        text-shadow: 5px 5px black;
     }
     #coffees{
-        top: 500px;
+        top: 750px;
     }
     #back {
-        top: 245px;
+        top: 500px;
         left: 40%;
+        font-size: 20px;
+        cursor: pointer;
     }
 }

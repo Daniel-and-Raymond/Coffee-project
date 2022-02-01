@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body id="hero">
 <div class>
     <div class="navbar">
         <img src="img/coffee-logo-2.png" class="logo" alt="logo">
         <div class="user">
-            <img src="img/add-coffee-to-list.png" alt="add-coffee-button">
+            <a id="switch-modal" href="#"><img src="img/add-coffee-to-list.png" alt="add-coffee-button"></a>
         </div>
     </div>
+
     <div class="container">
-        <div class="info">
+        <div id="coffees">
+        </div>
+        <div class="info" id="modal-one">
             <h1>Browse through our roasts</h1>
             <p>Click on which type of roast you like, and we will show you our selection.</p>
             <div class="roast-selection">
                 <label>Choose a kind of roast:</label>
-                <select>
+                <select id="roast-options">
                     <option>All Roasts</option>
                     <option>Light Roasts</option>
                     <option>Medium Roasts</option>
@@ -28,30 +31,28 @@
             </div>
             <div class="search-roast-input">
                 <input id="roast-search" type="text" placeholder="Search our roast">
-                <button type="submit">Search Coffee</button>
-            </div>
-            <div class="coffees">
+                <button id="search-coffee" type="submit">Search Coffee</button>
             </div>
         </div>
-        <div class="info hidden">
-            <h1>Add your own coffee!</h1>
+        <div class="info hidden" id="modal-two">
+            <h1 id="add-your-own-text">Add your own coffee!</h1>
             <p>What is your favorite flavor of coffee and add it to the list!</p>
             <div class="roast-selection">
                 <label>Choose a kind of roast:</label>
-                <select>
+                <select id="roast-selection-add">
                     <option>Light Roast</option>
                     <option>Medium Roast</option>
                     <option>Dark Roast</option>
                 </select>
             </div>
             <div class="search-roast-input">
-                <input id="add-coffee-input" type="text" placeholder="Type the name of your coffee here">
+                <input id="add-coffee-input" type="text" placeholder="Name of coffee here">
                 <button id="add-submit">Add Coffee</button>
+                <a href="#">Go back</a>
             </div>
-            <div class="coffees">
-            </div>
+
         </div>
-        <div class="vapour">
+        <div class="vapor">
             <span style="--i:1;"></span>
             <span style="--i:2;"></span>
             <span style="--i:5;"></span>
@@ -72,6 +73,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
 <script src="main.js"></script>

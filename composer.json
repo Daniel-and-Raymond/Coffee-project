@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/coffee-project",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "RaymondsGamer",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
